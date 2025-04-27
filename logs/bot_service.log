@@ -1,0 +1,50 @@
+2025-04-25 12:10:19,365 - bot_service - INFO - Iniciando el bot SMC+LIT...
+2025-04-25 12:10:19,789 - bot_service - INFO - Bot iniciado con PID: 269852
+2025-04-25 12:10:19,819 - bot_service - INFO - El bot está ejecutándose en segundo plano. Usa 'python run_bot_service.py stop' para detenerlo.
+2025-04-25 12:11:47,318 - bot_service - INFO - Deteniendo el bot (PID: 269852)...
+2025-04-25 12:11:47,844 - bot_service - INFO - Bot detenido correctamente.
+2025-04-25 12:11:49,888 - bot_service - INFO - Iniciando el bot SMC+LIT...
+2025-04-25 12:11:50,046 - bot_service - INFO - Bot iniciado con PID: 231692
+2025-04-25 12:11:50,062 - bot_service - INFO - El bot está ejecutándose en segundo plano. Usa 'python run_bot_service.py stop' para detenerlo.
+2025-04-25 12:12:18,518 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 12:12:18,518 - bot_service - INFO -   - PID: 231692
+2025-04-25 12:12:18,518 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 12:12:18,576 - bot_service - INFO -   - Tiempo de ejecución: 0:00:28.658277
+2025-04-25 12:12:18,644 - bot_service - INFO -   - Último ciclo: 1
+2025-04-25 12:12:18,656 - bot_service - INFO -   - Última ejecución: 2025-04-25 12:11:53
+2025-04-25 12:20:10,844 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 12:20:10,844 - bot_service - INFO -   - PID: 231692
+2025-04-25 12:20:10,844 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 12:20:10,844 - bot_service - INFO -   - Tiempo de ejecución: 0:08:20.926338
+2025-04-25 12:20:10,883 - bot_service - INFO -   - Último ciclo: 2
+2025-04-25 12:20:10,884 - bot_service - INFO -   - Última ejecución: 2025-04-25 12:16:54
+2025-04-25 12:30:42,760 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 12:30:42,789 - bot_service - INFO -   - PID: 231692
+2025-04-25 12:30:42,789 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 12:30:42,790 - bot_service - INFO -   - Tiempo de ejecución: 0:18:52.872280
+2025-04-25 12:30:43,207 - bot_service - INFO -   - Último ciclo: 4
+2025-04-25 12:30:43,208 - bot_service - INFO -   - Última ejecución: 2025-04-25 12:26:54
+2025-04-25 12:45:40,236 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 12:45:40,272 - bot_service - INFO -   - PID: 231692
+2025-04-25 12:45:40,273 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 12:45:40,274 - bot_service - INFO -   - Tiempo de ejecución: 0:33:50.355644
+2025-04-25 12:45:40,318 - bot_service - INFO -   - Último ciclo: 7
+2025-04-25 12:45:40,318 - bot_service - INFO -   - Última ejecución: 2025-04-25 12:41:55
+2025-04-25 13:14:59,679 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 13:14:59,682 - bot_service - INFO -   - PID: 231692
+2025-04-25 13:14:59,685 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 13:14:59,686 - bot_service - INFO -   - Tiempo de ejecución: 1:03:09.768759
+2025-04-25 13:14:59,716 - bot_service - INFO -   - Último ciclo: 13
+2025-04-25 13:14:59,717 - bot_service - INFO -   - Última ejecución: 2025-04-25 13:11:59
+2025-04-25 15:34:30,224 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 15:34:30,271 - bot_service - INFO -   - PID: 231692
+2025-04-25 15:34:30,271 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 15:34:30,271 - bot_service - INFO -   - Tiempo de ejecución: 3:22:40.353059
+2025-04-25 15:34:30,608 - bot_service - INFO -   - Último ciclo: 39
+2025-04-25 15:34:30,608 - bot_service - INFO -   - Última ejecución: 2025-04-25 15:22:09
+2025-04-25 16:04:36,038 - bot_service - INFO - El bot está en ejecución:
+2025-04-25 16:04:36,074 - bot_service - INFO -   - PID: 231692
+2025-04-25 16:04:36,074 - bot_service - INFO -   - Iniciado: 2025-04-25 12:11:49
+2025-04-25 16:04:36,074 - bot_service - INFO -   - Tiempo de ejecución: 3:52:46.156429
+2025-04-25 16:04:36,192 - bot_service - INFO -   - Último ciclo: 46
+2025-04-25 16:04:36,192 - bot_service - INFO -   - Última ejecución: 2025-04-25 15:59:56

@@ -1,0 +1,35 @@
+# Configuración SMC + LIT
+smc_params:
+  bos_validation_window: 3
+  choch_volume_multiplier: 1.2
+  volume_lookback_period: 14
+
+smc_lit_params:
+  order_block_sensitivity: 1.5
+  liquidity_pool_threshold: 5
+  confirmation_timeframe: '5m'
+  order_block_validation_window: 20  # <-- Añade este valor (ajusta el número según tu lógica)
+
+lit_params:
+  confirmation_bars: 3
+  liquidity_zone_threshold: 50000
+
+mt5:
+  server: "MetaQuotes-Demo"
+  login: 92058594
+  password: "@2LpLiDh"
+  symbol: "EURUSD"
+  timeframe: "M15"
+
+risk:
+  max_daily_risk: 2.0
+  trade_risk: 0.5
+  rr_ratio: 1.5
+
+# Configuración de ejecución continua
+execution:
+  interval: 300  # Intervalo en segundos entre ciclos de ejecución (5 minutos)
+  mode: "live"   # Modo de ejecución: 'live' o 'backtest'
+
+# Modo de operación
+mode: "live"  # 'live' para trading real, 'backtest' para backtesting

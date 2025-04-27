@@ -1,0 +1,1688 @@
+2025-04-24 13:11:58,752 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 13:11:58,763 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 13:20:03,229 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 13:20:03,239 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 13:21:02,752 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 13:21:02,752 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 13:30:04,646 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 13:30:04,663 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 13:30:04,683 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 13:30:04,704 [ERROR] smc_lit_bot: Error crítico: 'DataManager' object has no attribute '_fetch_raw_data'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 33, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 33, in get_market_data
+    raw_data = self._fetch_raw_data()
+               ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataManager' object has no attribute '_fetch_raw_data'
+2025-04-24 13:58:05,582 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 13:58:05,650 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 13:58:05,666 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 13:58:05,917 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 13:58:05,917 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 13:58:05,936 [ERROR] smc_lit_bot: Error crítico: 'volume'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'volume'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 33, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 64, in get_market_data
+    processed = self.calculate_volume_profile(raw_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 44, in calculate_volume_profile
+    df['volume_profile'] = df['volume'].ewm(span=self.volume_lookback).mean()
+                           ~~^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'volume'
+2025-04-24 14:27:29,948 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 14:27:30,004 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 14:27:30,004 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 14:27:30,355 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 14:27:30,355 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 14:27:30,371 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 14:27:30,388 [ERROR] smc_lit_bot: Error crítico: 'volume'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'volume'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 33, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 68, in get_market_data
+    processed = self.calculate_volume_profile(raw_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 48, in calculate_volume_profile
+    df['volume_profile'] = df['volume'].ewm(span=self.volume_lookback).mean()
+                           ~~^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'volume'
+2025-04-24 14:30:18,657 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 14:30:18,679 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 14:30:18,679 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 14:30:19,166 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 14:30:19,166 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 14:30:19,183 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 14:30:19,200 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 14:30:19,217 [ERROR] smc_lit_bot: Error crítico: 1
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+    return self._range.index(new_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 1 is not in range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 39, in main
+    signals = signal_generator.generate_signals(market_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 45, in generate_signals
+    'BOS': self.detect_bos(df),
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 15, in detect_bos
+    df['higher_high'] = df['high'].rolling(3).apply(lambda x: x[2] > x[1] > x[0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 2049, in apply
+    return super().apply(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 1508, in apply
+    return self._apply(
+           ^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 619, in _apply
+    return self._apply_columnwise(homogeneous_func, name, numeric_only)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 472, in _apply_columnwise
+    return self._apply_series(homogeneous_func, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 456, in _apply_series
+    result = homogeneous_func(values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 614, in homogeneous_func
+    result = calc(values)
+             ^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 611, in calc
+    return func(x, start, end, min_periods, *numba_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\window\rolling.py", line 1535, in apply_func
+    return window_func(values, begin, end, min_periods)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aggregations.pyx", line 1422, in pandas._libs.window.aggregations.roll_apply
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 15, in <lambda>
+    df['higher_high'] = df['high'].rolling(3).apply(lambda x: x[2] > x[1] > x[0])
+                                                                     ~^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+    raise KeyError(key) from err
+KeyError: 1
+2025-04-24 14:42:20,930 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 14:42:20,981 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 14:42:20,989 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 14:42:21,195 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 14:42:21,195 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 14:42:21,195 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 14:42:21,230 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 14:42:21,386 [ERROR] smc_lit_bot: Error crítico: 'volume'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'volume'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 39, in main
+    signals = signal_generator.generate_signals(market_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 47, in generate_signals
+    'CHoCH': self.identify_choch(df),
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 28, in identify_choch
+    df['volume_profile'] = df['volume'].rolling(5).mean()
+                           ~~^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'volume'
+2025-04-24 15:23:13,666 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 15:23:13,666 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 15:23:13,701 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 15:23:13,967 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 15:23:13,983 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 15:23:14,010 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 15:23:14,033 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 15:23:14,367 [ERROR] smc_lit_bot: Error crítico: 'volume'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'volume'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 39, in main
+    signals = signal_generator.generate_signals(market_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\signal_generator.py", line 48, in generate_signals
+    'LIT_confirmation': df['volume'].iloc[-self.lit_confirmation_bars:].mean() > \
+                        ~~^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'volume'
+2025-04-24 17:24:11,728 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 17:24:11,739 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 17:24:11,741 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 17:24:11,956 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 17:24:11,957 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 17:24:11,980 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 17:24:12,003 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 17:24:12,141 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-24 17:24:12,145 [ERROR] smc_lit_bot: Error crítico: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 44, in main
+    filtered_signals = risk_manager.filter_signals(signals)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\risk_manager.py", line 27, in filter_signals
+    'BOS': signals.get('BOS') and signals.get('LIT_confirmation'),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\generic.py", line 1577, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-04-24 17:47:31,430 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 17:47:31,442 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 17:47:31,445 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 17:47:31,669 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 17:47:31,671 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 17:47:31,692 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 17:47:31,715 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 17:47:32,151 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-24 17:47:32,168 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-24 17:47:32,175 [ERROR] smc_lit_bot: Error crítico: 'mode'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 47, in main
+    results = trade_executor.execute({
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\trade_executor.py", line 51, in execute
+    if self.config['mode'] == 'backtest':
+       ~~~~~~~~~~~^^^^^^^^
+KeyError: 'mode'
+2025-04-24 17:50:28,909 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-24 17:50:28,919 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-24 17:50:28,920 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-24 17:50:29,120 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-24 17:50:29,126 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-24 17:50:29,139 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-24 17:50:29,158 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-24 17:50:30,229 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-24 17:50:30,322 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-24 17:50:30,371 [ERROR] smc_lit_bot: Error crítico: 'TradeExecutor' object has no attribute 'generate_signals'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 47, in main
+    results = trade_executor.execute({
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\trade_executor.py", line 52, in execute
+    return self.backtest(signals)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\trade_executor.py", line 19, in backtest
+    signals = self.generate_signals(historical_data)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TradeExecutor' object has no attribute 'generate_signals'
+2025-04-25 09:20:50,089 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-25 09:20:50,149 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-25 09:20:50,152 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 09:20:50,249 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 09:20:50,251 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 09:20:50,316 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 09:20:50,345 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 09:20:50,717 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 09:20:50,722 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 09:20:50,772 [INFO] smc_lit_bot: Resultado del ciclo: {'total_trades': 0, 'win_rate': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.022122516728046254}
+2025-04-25 09:20:50,791 [INFO] smc_lit_bot: Ciclo completado correctamente.
+2025-04-25 09:48:20,320 [INFO] smc_lit_bot: Iniciando bot SMC + LIT...
+2025-04-25 09:48:20,610 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-25 09:48:20,612 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 09:48:20,858 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 09:48:20,860 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 09:48:21,033 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 09:48:21,061 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 09:48:21,917 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 09:48:21,921 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 09:48:21,922 [INFO] smc_lit_bot: Resultado del ciclo: {'total_trades': 0, 'win_rate': 0.0, 'profit_factor': 0.0, 'max_drawdown': 0.022122516728046254}
+2025-04-25 09:48:21,923 [INFO] smc_lit_bot: Ciclo completado correctamente.
+2025-04-25 12:10:28,343 [INFO] smc_lit_bot: Iniciando bot SMC + LIT en modo continuo...
+2025-04-25 12:10:28,354 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-25 12:10:28,355 [INFO] smc_lit_bot: Estado anterior cargado: No hay estado previo
+2025-04-25 12:10:28,355 [INFO] smc_lit_bot: Bot iniciado. Ejecutando ciclos cada 300 segundos. Presiona Ctrl+C para detener.
+2025-04-25 12:10:28,356 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #1 - 2025-04-25 12:10:28
+==================================================
+2025-04-25 12:10:28,356 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:10:28,451 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:10:28,451 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:10:28,483 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:10:28,500 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:10:28,824 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:10:28,839 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:10:28,839 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:10:28,886 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:10:28,886 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:10:28,886 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:10:28,886 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:10:28,918 [INFO] smc_lit_bot: Resultado del ciclo #1: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:10:28'}
+2025-04-25 12:10:28,918 [INFO] smc_lit_bot: Ciclo #1 completado correctamente.
+2025-04-25 12:11:53,030 [INFO] smc_lit_bot: Iniciando bot SMC + LIT en modo continuo...
+2025-04-25 12:11:53,045 [INFO] smc_lit_bot: Configuración cargada desde C:\Users\Usuario\Documents\BOT SMC + LIT\config\config.yaml
+2025-04-25 12:11:53,045 [INFO] smc_lit_bot: Estado anterior cargado: {'last_cycle': 1, 'last_execution_time': '2025-04-25 12:10:28', 'last_results': {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:10:28'}}
+2025-04-25 12:11:53,045 [INFO] smc_lit_bot: Bot iniciado. Ejecutando ciclos cada 300 segundos. Presiona Ctrl+C para detener.
+2025-04-25 12:11:53,045 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #1 - 2025-04-25 12:11:53
+==================================================
+2025-04-25 12:11:53,045 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:11:53,092 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:11:53,092 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:11:53,092 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:11:53,110 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:11:53,373 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:11:53,373 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:11:53,373 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:11:53,420 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:11:53,420 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:11:53,420 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:11:53,420 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:11:53,435 [INFO] smc_lit_bot: Resultado del ciclo #1: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:11:53'}
+2025-04-25 12:11:53,435 [INFO] smc_lit_bot: Ciclo #1 completado correctamente.
+2025-04-25 12:16:53,971 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #2 - 2025-04-25 12:16:53
+==================================================
+2025-04-25 12:16:53,971 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:16:54,054 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:16:54,054 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:16:54,054 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:16:54,070 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:16:54,381 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:16:54,381 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:16:54,381 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:16:54,488 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:16:54,488 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:16:54,488 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:16:54,488 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:16:54,503 [INFO] smc_lit_bot: Resultado del ciclo #2: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:16:54'}
+2025-04-25 12:16:54,503 [INFO] smc_lit_bot: Ciclo #2 completado correctamente.
+2025-04-25 12:21:54,147 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #3 - 2025-04-25 12:21:54
+==================================================
+2025-04-25 12:21:54,147 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:21:54,194 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:21:54,194 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:21:54,194 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:21:54,209 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:21:54,454 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:21:54,470 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:21:54,470 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: Resultado del ciclo #3: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:21:54'}
+2025-04-25 12:21:54,507 [INFO] smc_lit_bot: Ciclo #3 completado correctamente.
+2025-04-25 12:26:54,199 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #4 - 2025-04-25 12:26:54
+==================================================
+2025-04-25 12:26:54,200 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:26:54,271 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:26:54,271 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:26:54,275 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:26:54,286 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:26:54,626 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:26:54,642 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:26:54,642 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:26:54,699 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:26:54,699 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:26:54,699 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:26:54,700 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:26:54,751 [INFO] smc_lit_bot: Resultado del ciclo #4: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:26:54'}
+2025-04-25 12:26:54,798 [INFO] smc_lit_bot: Ciclo #4 completado correctamente.
+2025-04-25 12:31:54,233 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #5 - 2025-04-25 12:31:54
+==================================================
+2025-04-25 12:31:54,234 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:31:54,300 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:31:54,301 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:31:54,305 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:31:54,317 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:31:54,658 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:31:54,662 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:31:54,662 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:31:54,738 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:31:54,739 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:31:54,739 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:31:54,739 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:31:54,783 [INFO] smc_lit_bot: Resultado del ciclo #5: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:31:54'}
+2025-04-25 12:31:54,783 [INFO] smc_lit_bot: Ciclo #5 completado correctamente.
+2025-04-25 12:36:54,907 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #6 - 2025-04-25 12:36:54
+==================================================
+2025-04-25 12:36:54,907 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:36:55,103 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:36:55,104 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:36:55,108 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:36:55,121 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:36:55,590 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:36:55,597 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:36:55,597 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:36:55,734 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:36:55,734 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:36:55,735 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:36:55,735 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:36:55,784 [INFO] smc_lit_bot: Resultado del ciclo #6: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:36:55'}
+2025-04-25 12:36:55,784 [INFO] smc_lit_bot: Ciclo #6 completado correctamente.
+2025-04-25 12:41:55,090 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #7 - 2025-04-25 12:41:55
+==================================================
+2025-04-25 12:41:55,090 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:41:55,201 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:41:55,204 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:41:55,204 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:41:55,223 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:41:55,565 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:41:55,576 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:41:55,576 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:41:55,669 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:41:55,669 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:41:55,670 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:41:55,671 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:41:56,021 [INFO] smc_lit_bot: Resultado del ciclo #7: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:41:55'}
+2025-04-25 12:41:56,021 [INFO] smc_lit_bot: Ciclo #7 completado correctamente.
+2025-04-25 12:46:56,004 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #8 - 2025-04-25 12:46:56
+==================================================
+2025-04-25 12:46:56,004 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:46:56,046 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:46:56,047 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:46:56,052 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:46:56,062 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:46:56,303 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:46:56,303 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:46:56,303 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:46:56,368 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:46:56,368 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:46:56,368 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:46:56,368 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:46:56,393 [INFO] smc_lit_bot: Resultado del ciclo #8: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:46:56'}
+2025-04-25 12:46:56,393 [INFO] smc_lit_bot: Ciclo #8 completado correctamente.
+2025-04-25 12:51:56,203 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #9 - 2025-04-25 12:51:56
+==================================================
+2025-04-25 12:51:56,203 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:51:56,249 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:51:56,249 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:51:56,259 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:51:56,259 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:51:56,508 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:51:56,508 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:51:56,508 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:51:56,612 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:51:56,613 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:51:56,613 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:51:56,613 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:51:56,618 [INFO] smc_lit_bot: Resultado del ciclo #9: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:51:56'}
+2025-04-25 12:51:56,618 [INFO] smc_lit_bot: Ciclo #9 completado correctamente.
+2025-04-25 12:56:56,797 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #10 - 2025-04-25 12:56:56
+==================================================
+2025-04-25 12:56:56,797 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 12:56:56,893 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 12:56:56,893 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 12:56:56,893 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 12:56:56,909 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 12:56:57,116 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 12:56:57,132 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 12:56:57,132 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 12:56:57,202 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 12:56:57,202 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 12:56:57,202 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 12:56:57,202 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 12:56:57,218 [INFO] smc_lit_bot: Resultado del ciclo #10: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 12:56:57'}
+2025-04-25 12:56:57,218 [INFO] smc_lit_bot: Ciclo #10 completado correctamente.
+2025-04-25 13:01:57,615 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #11 - 2025-04-25 13:01:57
+==================================================
+2025-04-25 13:01:57,615 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:01:57,666 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:01:57,666 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:01:57,666 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:01:57,682 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:01:57,919 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:01:57,919 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:01:57,919 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: Resultado del ciclo #11: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:01:57'}
+2025-04-25 13:01:57,982 [INFO] smc_lit_bot: Ciclo #11 completado correctamente.
+2025-04-25 13:06:57,805 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #12 - 2025-04-25 13:06:57
+==================================================
+2025-04-25 13:06:57,805 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:06:57,884 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:06:57,884 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:06:57,884 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:06:57,894 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:06:58,140 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:06:58,156 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:06:58,156 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: Resultado del ciclo #12: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:06:58'}
+2025-04-25 13:06:58,218 [INFO] smc_lit_bot: Ciclo #12 completado correctamente.
+2025-04-25 13:11:57,944 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #13 - 2025-04-25 13:11:57
+==================================================
+2025-04-25 13:11:57,944 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:11:58,356 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:11:58,357 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:11:58,364 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:11:58,448 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:11:59,030 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:11:59,040 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:11:59,041 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:11:59,320 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:11:59,321 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:11:59,321 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:11:59,321 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:11:59,365 [INFO] smc_lit_bot: Resultado del ciclo #13: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:11:59'}
+2025-04-25 13:11:59,366 [INFO] smc_lit_bot: Ciclo #13 completado correctamente.
+2025-04-25 13:16:58,016 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #14 - 2025-04-25 13:16:58
+==================================================
+2025-04-25 13:16:58,016 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:16:58,058 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:16:58,058 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:16:58,058 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:16:58,073 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:16:58,250 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:16:58,250 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:16:58,250 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: Resultado del ciclo #14: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:16:58'}
+2025-04-25 13:16:58,313 [INFO] smc_lit_bot: Ciclo #14 completado correctamente.
+2025-04-25 13:21:58,472 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #15 - 2025-04-25 13:21:58
+==================================================
+2025-04-25 13:21:58,472 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:21:58,597 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:21:58,597 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:21:58,597 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:21:58,613 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:21:58,903 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:21:58,903 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:21:58,903 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:21:58,973 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:21:58,973 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:21:58,973 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:21:58,973 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:21:58,989 [INFO] smc_lit_bot: Resultado del ciclo #15: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:21:58'}
+2025-04-25 13:21:58,989 [INFO] smc_lit_bot: Ciclo #15 completado correctamente.
+2025-04-25 13:26:58,882 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #16 - 2025-04-25 13:26:58
+==================================================
+2025-04-25 13:26:58,882 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:26:58,948 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:26:58,948 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:26:58,948 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:26:58,966 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:26:59,219 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:26:59,219 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:26:59,219 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: Resultado del ciclo #16: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:26:59'}
+2025-04-25 13:26:59,322 [INFO] smc_lit_bot: Ciclo #16 completado correctamente.
+2025-04-25 13:31:59,839 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #17 - 2025-04-25 13:31:59
+==================================================
+2025-04-25 13:31:59,839 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:31:59,926 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:31:59,926 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:31:59,941 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:31:59,944 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:32:00,293 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:32:00,293 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:32:00,293 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:32:00,442 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:32:00,443 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:32:00,459 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:32:00,459 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:32:00,459 [INFO] smc_lit_bot: Resultado del ciclo #17: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:32:00'}
+2025-04-25 13:32:00,459 [INFO] smc_lit_bot: Ciclo #17 completado correctamente.
+2025-04-25 13:37:00,057 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #18 - 2025-04-25 13:37:00
+==================================================
+2025-04-25 13:37:00,057 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:37:00,136 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:37:00,136 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:37:00,136 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:37:00,151 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:37:00,302 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:37:00,302 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:37:00,302 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:37:00,414 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:37:00,414 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:37:00,414 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:37:00,414 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:37:00,430 [INFO] smc_lit_bot: Resultado del ciclo #18: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:37:00'}
+2025-04-25 13:37:00,430 [INFO] smc_lit_bot: Ciclo #18 completado correctamente.
+2025-04-25 13:42:00,381 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #19 - 2025-04-25 13:42:00
+==================================================
+2025-04-25 13:42:00,382 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:42:00,580 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:42:00,580 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:42:00,583 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:42:00,594 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:42:00,914 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:42:00,917 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:42:00,918 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:42:01,053 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:42:01,054 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:42:01,054 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:42:01,054 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:42:01,079 [INFO] smc_lit_bot: Resultado del ciclo #19: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:42:01'}
+2025-04-25 13:42:01,080 [INFO] smc_lit_bot: Ciclo #19 completado correctamente.
+2025-04-25 13:47:01,062 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #20 - 2025-04-25 13:47:01
+==================================================
+2025-04-25 13:47:01,062 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:47:01,136 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:47:01,137 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:47:01,141 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:47:01,156 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:47:01,325 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:47:01,327 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:47:01,327 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:47:01,387 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:47:01,387 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:47:01,388 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:47:01,388 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:47:01,390 [INFO] smc_lit_bot: Resultado del ciclo #20: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:47:01'}
+2025-04-25 13:47:01,391 [INFO] smc_lit_bot: Ciclo #20 completado correctamente.
+2025-04-25 13:52:01,276 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #21 - 2025-04-25 13:52:01
+==================================================
+2025-04-25 13:52:01,276 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:52:01,364 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:52:01,365 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:52:01,369 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:52:01,381 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:52:01,648 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:52:01,653 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:52:01,653 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:52:01,740 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:52:01,740 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:52:01,740 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:52:01,741 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:52:01,747 [INFO] smc_lit_bot: Resultado del ciclo #21: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:52:01'}
+2025-04-25 13:52:01,748 [INFO] smc_lit_bot: Ciclo #21 completado correctamente.
+2025-04-25 13:57:01,706 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #22 - 2025-04-25 13:57:01
+==================================================
+2025-04-25 13:57:01,706 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 13:57:01,875 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 13:57:01,875 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 13:57:01,878 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 13:57:01,891 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 13:57:02,198 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 13:57:02,201 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 13:57:02,201 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 13:57:02,418 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 13:57:02,418 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 13:57:02,418 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 13:57:02,419 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 13:57:02,440 [INFO] smc_lit_bot: Resultado del ciclo #22: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 13:57:02'}
+2025-04-25 13:57:02,440 [INFO] smc_lit_bot: Ciclo #22 completado correctamente.
+2025-04-25 14:02:02,207 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #23 - 2025-04-25 14:02:02
+==================================================
+2025-04-25 14:02:02,207 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:02:02,284 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:02:02,284 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:02:02,287 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:02:02,296 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:02:02,564 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:02:02,567 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:02:02,567 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:02:02,686 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:02:02,692 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:02:02,693 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:02:02,693 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:02:02,708 [INFO] smc_lit_bot: Resultado del ciclo #23: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:02:02'}
+2025-04-25 14:02:02,708 [INFO] smc_lit_bot: Ciclo #23 completado correctamente.
+2025-04-25 14:07:02,278 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #24 - 2025-04-25 14:07:02
+==================================================
+2025-04-25 14:07:02,278 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:07:02,412 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:07:02,413 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:07:02,416 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:07:02,428 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:07:02,680 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:07:02,684 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:07:02,685 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:07:02,810 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:07:02,811 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:07:02,811 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:07:02,812 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:07:02,828 [INFO] smc_lit_bot: Resultado del ciclo #24: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:07:02'}
+2025-04-25 14:07:02,828 [INFO] smc_lit_bot: Ciclo #24 completado correctamente.
+2025-04-25 14:12:02,971 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #25 - 2025-04-25 14:12:02
+==================================================
+2025-04-25 14:12:02,972 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:12:03,121 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:12:03,121 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:12:03,125 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:12:03,134 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:12:03,417 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:12:03,424 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:12:03,424 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:12:03,514 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:12:03,514 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:12:03,515 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:12:03,515 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:12:03,519 [INFO] smc_lit_bot: Resultado del ciclo #25: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:12:03'}
+2025-04-25 14:12:03,519 [INFO] smc_lit_bot: Ciclo #25 completado correctamente.
+2025-04-25 14:17:03,229 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #26 - 2025-04-25 14:17:03
+==================================================
+2025-04-25 14:17:03,231 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:17:03,330 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:17:03,331 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:17:03,334 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:17:03,343 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:17:03,585 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:17:03,589 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:17:03,589 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:17:03,706 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:17:03,706 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:17:03,706 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:17:03,707 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:17:03,711 [INFO] smc_lit_bot: Resultado del ciclo #26: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:17:03'}
+2025-04-25 14:17:03,712 [INFO] smc_lit_bot: Ciclo #26 completado correctamente.
+2025-04-25 14:22:03,825 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #27 - 2025-04-25 14:22:03
+==================================================
+2025-04-25 14:22:03,825 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:22:03,907 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:22:03,908 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:22:03,910 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:22:03,916 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:22:04,078 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:22:04,080 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:22:04,080 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:22:04,170 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:22:04,171 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:22:04,171 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:22:04,171 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:22:04,174 [INFO] smc_lit_bot: Resultado del ciclo #27: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:22:04'}
+2025-04-25 14:22:04,174 [INFO] smc_lit_bot: Ciclo #27 completado correctamente.
+2025-04-25 14:27:04,776 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #28 - 2025-04-25 14:27:04
+==================================================
+2025-04-25 14:27:04,776 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:27:04,852 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:27:04,853 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:27:04,856 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:27:04,865 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:27:05,056 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:27:05,059 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:27:05,059 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:27:05,145 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:27:05,146 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:27:05,146 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:27:05,146 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:27:05,150 [INFO] smc_lit_bot: Resultado del ciclo #28: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:27:05'}
+2025-04-25 14:27:05,150 [INFO] smc_lit_bot: Ciclo #28 completado correctamente.
+2025-04-25 14:32:04,927 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #29 - 2025-04-25 14:32:04
+==================================================
+2025-04-25 14:32:04,927 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:32:05,035 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:32:05,035 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:32:05,039 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:32:05,051 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:32:05,260 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:32:05,263 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:32:05,264 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:32:05,341 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:32:05,342 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:32:05,342 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:32:05,342 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:32:05,344 [INFO] smc_lit_bot: Resultado del ciclo #29: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:32:05'}
+2025-04-25 14:32:05,345 [INFO] smc_lit_bot: Ciclo #29 completado correctamente.
+2025-04-25 14:37:05,165 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #30 - 2025-04-25 14:37:05
+==================================================
+2025-04-25 14:37:05,165 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:37:05,271 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:37:05,272 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:37:05,275 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:37:05,285 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:37:05,555 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:37:05,565 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:37:05,566 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:37:05,675 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:37:05,676 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:37:05,676 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:37:05,676 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:37:05,683 [INFO] smc_lit_bot: Resultado del ciclo #30: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:37:05'}
+2025-04-25 14:37:05,684 [INFO] smc_lit_bot: Ciclo #30 completado correctamente.
+2025-04-25 14:42:05,629 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #31 - 2025-04-25 14:42:05
+==================================================
+2025-04-25 14:42:05,629 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:42:05,729 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:42:05,729 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:42:05,733 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:42:05,744 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:42:05,977 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:42:05,980 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:42:05,980 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:42:06,096 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:42:06,096 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:42:06,096 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:42:06,097 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:42:06,102 [INFO] smc_lit_bot: Resultado del ciclo #31: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:42:06'}
+2025-04-25 14:42:06,102 [INFO] smc_lit_bot: Ciclo #31 completado correctamente.
+2025-04-25 14:47:06,005 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #32 - 2025-04-25 14:47:06
+==================================================
+2025-04-25 14:47:06,005 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:47:06,216 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:47:06,216 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:47:06,224 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:47:06,235 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:47:06,552 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:47:06,556 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:47:06,556 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:47:06,722 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:47:06,722 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:47:06,722 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:47:06,722 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:47:06,763 [INFO] smc_lit_bot: Resultado del ciclo #32: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:47:06'}
+2025-04-25 14:47:06,763 [INFO] smc_lit_bot: Ciclo #32 completado correctamente.
+2025-04-25 14:52:06,308 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #33 - 2025-04-25 14:52:06
+==================================================
+2025-04-25 14:52:06,308 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:52:06,390 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:52:06,391 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:52:06,394 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:52:06,406 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:52:06,696 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:52:06,698 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:52:06,699 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:52:06,830 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:52:06,830 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:52:06,831 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:52:06,831 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:52:06,838 [INFO] smc_lit_bot: Resultado del ciclo #33: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:52:06'}
+2025-04-25 14:52:06,838 [INFO] smc_lit_bot: Ciclo #33 completado correctamente.
+2025-04-25 14:57:07,130 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #34 - 2025-04-25 14:57:07
+==================================================
+2025-04-25 14:57:07,135 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 14:57:07,432 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 14:57:07,433 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 14:57:07,439 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 14:57:07,457 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 14:57:07,754 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 14:57:07,757 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 14:57:07,758 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 14:57:07,857 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 14:57:07,857 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 14:57:07,857 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 14:57:07,858 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 14:57:07,861 [INFO] smc_lit_bot: Resultado del ciclo #34: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 14:57:07'}
+2025-04-25 14:57:07,861 [INFO] smc_lit_bot: Ciclo #34 completado correctamente.
+2025-04-25 15:02:07,159 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #35 - 2025-04-25 15:02:07
+==================================================
+2025-04-25 15:02:07,159 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:02:07,255 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:02:07,255 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:02:07,258 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:02:07,268 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:02:07,476 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:02:07,479 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:02:07,479 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:02:07,567 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:02:07,567 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:02:07,567 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:02:07,567 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:02:07,570 [INFO] smc_lit_bot: Resultado del ciclo #35: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:02:07'}
+2025-04-25 15:02:07,570 [INFO] smc_lit_bot: Ciclo #35 completado correctamente.
+2025-04-25 15:07:07,335 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #36 - 2025-04-25 15:07:07
+==================================================
+2025-04-25 15:07:07,336 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:07:07,469 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:07:07,469 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:07:07,473 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:07:07,481 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:07:07,724 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:07:07,747 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:07:07,751 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:07:07,780 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:07:07,781 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:07:07,781 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:07:07,781 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:07:07,795 [INFO] smc_lit_bot: Resultado del ciclo #36: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:07:07'}
+2025-04-25 15:07:07,795 [INFO] smc_lit_bot: Ciclo #36 completado correctamente.
+2025-04-25 15:12:08,050 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #37 - 2025-04-25 15:12:08
+==================================================
+2025-04-25 15:12:08,050 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:12:08,061 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:12:08,061 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:12:08,061 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:12:08,078 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:12:08,298 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:12:08,298 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:12:08,298 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: Resultado del ciclo #37: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:12:08'}
+2025-04-25 15:12:08,314 [INFO] smc_lit_bot: Ciclo #37 completado correctamente.
+2025-04-25 15:17:08,665 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #38 - 2025-04-25 15:17:08
+==================================================
+2025-04-25 15:17:08,665 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:17:08,712 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:17:08,712 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:17:08,712 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:17:08,712 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:17:09,123 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:17:09,123 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:17:09,123 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:17:09,301 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:17:09,301 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:17:09,301 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:17:09,301 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:17:09,332 [INFO] smc_lit_bot: Resultado del ciclo #38: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:17:09'}
+2025-04-25 15:17:09,332 [INFO] smc_lit_bot: Ciclo #38 completado correctamente.
+2025-04-25 15:22:08,871 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #39 - 2025-04-25 15:22:08
+==================================================
+2025-04-25 15:22:08,871 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:22:08,903 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:22:08,903 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:22:08,903 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:22:08,903 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:22:09,161 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:22:09,161 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:22:09,161 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:22:09,192 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:22:09,192 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:22:09,199 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:22:09,199 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:22:09,206 [INFO] smc_lit_bot: Resultado del ciclo #39: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:22:09'}
+2025-04-25 15:22:09,206 [INFO] smc_lit_bot: Ciclo #39 completado correctamente.
+2025-04-25 15:29:52,956 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #40 - 2025-04-25 15:29:52
+==================================================
+2025-04-25 15:29:52,956 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:29:52,981 [ERROR] smc_lit_bot.data: Fallo de conexión con MT5: (-6, 'Terminal: Authorization failed')
+2025-04-25 15:29:53,349 [ERROR] smc_lit_bot: Error crítico en ciclo #40: 'real_volume'
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\main.py", line 101, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 62, in get_market_data
+    processed = self.calculate_volume_profile(raw_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\src\modules\data_manager.py", line 48, in calculate_volume_profile
+    df['volume_profile'] = df['real_volume'].ewm(span=self.volume_lookback).mean()
+                           ~~^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Usuario\Documents\BOT SMC + LIT\venv\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'real_volume'
+2025-04-25 15:34:53,898 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #41 - 2025-04-25 15:34:53
+==================================================
+2025-04-25 15:34:53,898 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:34:54,006 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:34:54,007 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:34:54,011 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:34:54,025 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:34:54,482 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:34:54,489 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:34:54,489 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:34:54,551 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:34:54,552 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:34:54,552 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:34:54,552 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:34:54,562 [INFO] smc_lit_bot: Resultado del ciclo #41: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:34:54'}
+2025-04-25 15:34:54,563 [INFO] smc_lit_bot: Ciclo #41 completado correctamente.
+2025-04-25 15:39:54,358 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #42 - 2025-04-25 15:39:54
+==================================================
+2025-04-25 15:39:54,358 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:39:54,493 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:39:54,494 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:39:54,498 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:39:54,511 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:39:55,026 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:39:55,030 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:39:55,030 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:39:55,081 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:39:55,081 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:39:55,081 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:39:55,081 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:39:55,089 [INFO] smc_lit_bot: Resultado del ciclo #42: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:39:55'}
+2025-04-25 15:39:55,090 [INFO] smc_lit_bot: Ciclo #42 completado correctamente.
+2025-04-25 15:44:54,546 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #43 - 2025-04-25 15:44:54
+==================================================
+2025-04-25 15:44:54,546 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:44:54,630 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:44:54,630 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:44:54,630 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:44:54,630 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:44:54,945 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:44:54,945 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:44:54,945 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:44:55,029 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:44:55,029 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:44:55,029 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:44:55,029 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:44:55,032 [INFO] smc_lit_bot: Resultado del ciclo #43: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:44:55'}
+2025-04-25 15:44:55,032 [INFO] smc_lit_bot: Ciclo #43 completado correctamente.
+2025-04-25 15:49:54,846 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #44 - 2025-04-25 15:49:54
+==================================================
+2025-04-25 15:49:54,846 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:49:54,888 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:49:54,888 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:49:54,893 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:49:54,902 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:49:55,182 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:49:55,187 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:49:55,187 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:49:55,224 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:49:55,224 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:49:55,225 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:49:55,225 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:49:55,228 [INFO] smc_lit_bot: Resultado del ciclo #44: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:49:55'}
+2025-04-25 15:49:55,228 [INFO] smc_lit_bot: Ciclo #44 completado correctamente.
+2025-04-25 15:54:55,844 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #45 - 2025-04-25 15:54:55
+==================================================
+2025-04-25 15:54:55,846 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:54:55,881 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:54:55,881 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:54:55,885 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:54:55,895 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:54:56,111 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:54:56,115 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:54:56,115 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:54:56,151 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:54:56,151 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:54:56,152 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:54:56,152 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:54:56,154 [INFO] smc_lit_bot: Resultado del ciclo #45: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:54:56'}
+2025-04-25 15:54:56,154 [INFO] smc_lit_bot: Ciclo #45 completado correctamente.
+2025-04-25 15:59:56,174 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #46 - 2025-04-25 15:59:56
+==================================================
+2025-04-25 15:59:56,174 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 15:59:56,190 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 15:59:56,190 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 15:59:56,206 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 15:59:56,206 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 15:59:56,351 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 15:59:56,351 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 15:59:56,351 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: Resultado del ciclo #46: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 15:59:56'}
+2025-04-25 15:59:56,377 [INFO] smc_lit_bot: Ciclo #46 completado correctamente.
+2025-04-25 16:04:56,263 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #47 - 2025-04-25 16:04:56
+==================================================
+2025-04-25 16:04:56,263 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:04:56,304 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:04:56,304 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:04:56,304 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:04:56,320 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:04:56,581 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:04:56,588 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:04:56,588 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: Resultado del ciclo #47: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:04:56'}
+2025-04-25 16:04:56,672 [INFO] smc_lit_bot: Ciclo #47 completado correctamente.
+2025-04-25 16:09:57,024 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #48 - 2025-04-25 16:09:57
+==================================================
+2025-04-25 16:09:57,024 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:09:57,104 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:09:57,104 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:09:57,104 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:09:57,121 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:09:57,584 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:09:57,602 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:09:57,602 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:09:57,684 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:09:57,686 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:09:57,686 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:09:57,686 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:09:57,903 [INFO] smc_lit_bot: Resultado del ciclo #48: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:09:57'}
+2025-04-25 16:09:57,903 [INFO] smc_lit_bot: Ciclo #48 completado correctamente.
+2025-04-25 16:14:57,910 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #49 - 2025-04-25 16:14:57
+==================================================
+2025-04-25 16:14:57,910 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:14:57,957 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:14:57,957 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:14:57,957 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:14:57,973 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:14:58,187 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:14:58,187 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:14:58,187 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: Resultado del ciclo #49: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:14:58'}
+2025-04-25 16:14:58,260 [INFO] smc_lit_bot: Ciclo #49 completado correctamente.
+2025-04-25 16:19:58,472 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #50 - 2025-04-25 16:19:58
+==================================================
+2025-04-25 16:19:58,472 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:19:58,537 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:19:58,537 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:19:58,537 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:19:58,547 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:19:58,829 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:19:58,829 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:19:58,829 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:19:58,898 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:19:58,898 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:19:58,898 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:19:58,898 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:19:58,979 [INFO] smc_lit_bot: Resultado del ciclo #50: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:19:58'}
+2025-04-25 16:19:58,979 [INFO] smc_lit_bot: Ciclo #50 completado correctamente.
+2025-04-25 16:24:59,437 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #51 - 2025-04-25 16:24:59
+==================================================
+2025-04-25 16:24:59,437 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:24:59,485 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:24:59,485 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:24:59,485 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:24:59,485 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:24:59,718 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:24:59,736 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:24:59,736 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:24:59,918 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:24:59,918 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:24:59,918 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:24:59,918 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:24:59,969 [INFO] smc_lit_bot: Resultado del ciclo #51: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:24:59'}
+2025-04-25 16:24:59,969 [INFO] smc_lit_bot: Ciclo #51 completado correctamente.
+2025-04-25 16:29:59,964 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #52 - 2025-04-25 16:29:59
+==================================================
+2025-04-25 16:29:59,964 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:30:00,031 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:30:00,031 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:30:00,046 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:30:00,046 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:30:00,346 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:30:00,346 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:30:00,346 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: Resultado del ciclo #52: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:30:00'}
+2025-04-25 16:30:00,413 [INFO] smc_lit_bot: Ciclo #52 completado correctamente.
+2025-04-25 16:35:00,610 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #53 - 2025-04-25 16:35:00
+==================================================
+2025-04-25 16:35:00,610 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:35:00,677 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:35:00,677 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:35:00,677 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:35:00,691 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:35:00,957 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:35:00,974 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:35:00,974 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:35:01,076 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:35:01,076 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:35:01,076 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:35:01,076 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:35:01,091 [INFO] smc_lit_bot: Resultado del ciclo #53: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:35:01'}
+2025-04-25 16:35:01,091 [INFO] smc_lit_bot: Ciclo #53 completado correctamente.
+2025-04-25 16:40:00,746 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #54 - 2025-04-25 16:40:00
+==================================================
+2025-04-25 16:40:00,746 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:40:00,816 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:40:00,816 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:40:00,816 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:40:00,833 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:40:01,150 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:40:01,150 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:40:01,150 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:40:01,238 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:40:01,238 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:40:01,238 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:40:01,238 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:40:01,257 [INFO] smc_lit_bot: Resultado del ciclo #54: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:40:01'}
+2025-04-25 16:40:01,257 [INFO] smc_lit_bot: Ciclo #54 completado correctamente.
+2025-04-25 16:45:00,961 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #55 - 2025-04-25 16:45:00
+==================================================
+2025-04-25 16:45:00,961 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:45:01,127 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:45:01,127 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:45:01,145 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:45:01,161 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:45:01,428 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:45:01,428 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:45:01,428 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:45:01,530 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:45:01,530 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:45:01,530 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:45:01,530 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:45:01,545 [INFO] smc_lit_bot: Resultado del ciclo #55: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:45:01'}
+2025-04-25 16:45:01,545 [INFO] smc_lit_bot: Ciclo #55 completado correctamente.
+2025-04-25 16:50:01,186 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #56 - 2025-04-25 16:50:01
+==================================================
+2025-04-25 16:50:01,186 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:50:01,278 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:50:01,278 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:50:01,282 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:50:01,289 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:50:01,543 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:50:01,546 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:50:01,546 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: Resultado del ciclo #56: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:50:01'}
+2025-04-25 16:50:01,604 [INFO] smc_lit_bot: Ciclo #56 completado correctamente.
+2025-04-25 16:55:02,167 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #57 - 2025-04-25 16:55:02
+==================================================
+2025-04-25 16:55:02,167 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 16:55:02,233 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 16:55:02,233 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 16:55:02,233 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 16:55:02,248 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 16:55:02,517 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 16:55:02,534 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 16:55:02,534 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 16:55:02,599 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 16:55:02,599 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 16:55:02,599 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 16:55:02,599 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 16:55:02,618 [INFO] smc_lit_bot: Resultado del ciclo #57: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 16:55:02'}
+2025-04-25 16:55:02,618 [INFO] smc_lit_bot: Ciclo #57 completado correctamente.
+2025-04-25 17:00:02,883 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #58 - 2025-04-25 17:00:02
+==================================================
+2025-04-25 17:00:02,884 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:00:03,064 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:00:03,064 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:00:03,068 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:00:03,081 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:00:03,609 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:00:03,616 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:00:03,616 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:00:03,764 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:00:03,765 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:00:03,765 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:00:03,765 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:00:03,773 [INFO] smc_lit_bot: Resultado del ciclo #58: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:00:03'}
+2025-04-25 17:00:03,773 [INFO] smc_lit_bot: Ciclo #58 completado correctamente.
+2025-04-25 17:05:03,304 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #59 - 2025-04-25 17:05:03
+==================================================
+2025-04-25 17:05:03,304 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:05:03,389 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:05:03,389 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:05:03,389 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:05:03,405 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:05:03,705 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:05:03,705 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:05:03,705 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:05:03,822 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:05:03,822 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:05:03,822 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:05:03,822 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:05:03,848 [INFO] smc_lit_bot: Resultado del ciclo #59: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:05:03'}
+2025-04-25 17:05:03,848 [INFO] smc_lit_bot: Ciclo #59 completado correctamente.
+2025-04-25 17:10:03,928 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #60 - 2025-04-25 17:10:03
+==================================================
+2025-04-25 17:10:03,928 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:10:04,082 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:10:04,082 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:10:04,082 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:10:04,098 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:10:04,385 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:10:04,385 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:10:04,385 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:10:04,545 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:10:04,545 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:10:04,545 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:10:04,545 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:10:04,567 [INFO] smc_lit_bot: Resultado del ciclo #60: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:10:04'}
+2025-04-25 17:10:04,567 [INFO] smc_lit_bot: Ciclo #60 completado correctamente.
+2025-04-25 17:15:04,396 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #61 - 2025-04-25 17:15:04
+==================================================
+2025-04-25 17:15:04,396 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:15:04,525 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:15:04,525 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:15:04,525 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:15:04,544 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:15:04,877 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:15:04,877 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:15:04,877 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: Resultado del ciclo #61: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:15:04'}
+2025-04-25 17:15:04,964 [INFO] smc_lit_bot: Ciclo #61 completado correctamente.
+2025-04-25 17:20:04,822 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #62 - 2025-04-25 17:20:04
+==================================================
+2025-04-25 17:20:04,822 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:20:04,959 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:20:04,959 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:20:04,963 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:20:04,975 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:20:05,281 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:20:05,284 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:20:05,285 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:20:05,414 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:20:05,415 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:20:05,415 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:20:05,415 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:20:05,433 [INFO] smc_lit_bot: Resultado del ciclo #62: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:20:05'}
+2025-04-25 17:20:05,433 [INFO] smc_lit_bot: Ciclo #62 completado correctamente.
+2025-04-25 17:25:05,477 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #63 - 2025-04-25 17:25:05
+==================================================
+2025-04-25 17:25:05,477 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:25:05,581 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:25:05,581 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:25:05,599 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:25:05,605 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:25:05,883 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:25:05,883 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:25:05,899 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:25:05,968 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:25:05,968 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:25:05,968 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:25:05,968 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:25:05,982 [INFO] smc_lit_bot: Resultado del ciclo #63: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:25:05'}
+2025-04-25 17:25:05,982 [INFO] smc_lit_bot: Ciclo #63 completado correctamente.
+2025-04-25 17:30:06,357 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #64 - 2025-04-25 17:30:06
+==================================================
+2025-04-25 17:30:06,358 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:30:06,518 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:30:06,518 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:30:06,522 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:30:06,537 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:30:06,917 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:30:06,921 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:30:06,921 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:30:07,038 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:30:07,038 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:30:07,038 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:30:07,039 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:30:07,047 [INFO] smc_lit_bot: Resultado del ciclo #64: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:30:07'}
+2025-04-25 17:30:07,047 [INFO] smc_lit_bot: Ciclo #64 completado correctamente.
+2025-04-25 17:35:06,696 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #65 - 2025-04-25 17:35:06
+==================================================
+2025-04-25 17:35:06,696 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:35:06,904 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:35:06,904 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:35:06,904 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:35:06,921 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:35:07,138 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:35:07,138 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:35:07,138 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:35:07,238 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:35:07,290 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:35:07,290 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:35:07,290 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:35:07,791 [INFO] smc_lit_bot: Resultado del ciclo #65: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:35:07'}
+2025-04-25 17:35:07,792 [INFO] smc_lit_bot: Ciclo #65 completado correctamente.
+2025-04-25 17:40:07,228 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #66 - 2025-04-25 17:40:07
+==================================================
+2025-04-25 17:40:07,228 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:40:07,378 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:40:07,378 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:40:07,378 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:40:07,394 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:40:07,749 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:40:07,766 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:40:07,766 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:40:07,908 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:40:07,908 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:40:07,908 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:40:07,908 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:40:07,940 [INFO] smc_lit_bot: Resultado del ciclo #66: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:40:07'}
+2025-04-25 17:40:07,940 [INFO] smc_lit_bot: Ciclo #66 completado correctamente.
+2025-04-25 17:45:07,601 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #67 - 2025-04-25 17:45:07
+==================================================
+2025-04-25 17:45:07,601 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-04-25 17:45:08,312 [INFO] smc_lit_bot.data: Conexión exitosa a MT5
+2025-04-25 17:45:08,312 [INFO] smc_lit_bot.data: Obteniendo datos de mercado para EURUSD en M15
+2025-04-25 17:45:08,494 [INFO] smc_lit_bot.data: Columnas disponibles en los datos: Index(['datetime', 'open', 'high', 'low', 'close', 'tick_volume', 'spread',
+       'real_volume'],
+      dtype='object')
+2025-04-25 17:45:08,494 [INFO] smc_lit_bot: Generando señales SMC+LIT...
+2025-04-25 17:45:08,747 [INFO] smc_lit_bot: Analizando zonas de liquidez y gestionando riesgo...
+2025-04-25 17:45:08,762 [INFO] smc_lit_bot: Ejecutando estrategia...
+2025-04-25 17:45:08,762 [INFO] smc_lit_bot: Conectando a MetaTrader 5 (intento 1/3)...
+2025-04-25 17:45:08,895 [INFO] smc_lit_bot: Conexión a MetaTrader 5 establecida correctamente.
+2025-04-25 17:45:08,895 [INFO] smc_lit_bot: Ejecutando operaciones en vivo...
+2025-04-25 17:45:08,895 [INFO] smc_lit_bot: No hay señales activas para ejecutar operaciones.
+2025-04-25 17:45:08,895 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
+2025-04-25 17:45:08,926 [INFO] smc_lit_bot: Resultado del ciclo #67: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:45:08'}
+2025-04-25 17:45:08,926 [INFO] smc_lit_bot: Ciclo #67 completado correctamente.
