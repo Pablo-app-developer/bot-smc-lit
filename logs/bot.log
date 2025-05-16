@@ -1686,3 +1686,97 @@ Iniciando ciclo #67 - 2025-04-25 17:45:07
 2025-04-25 17:45:08,895 [INFO] smc_lit_bot: Conexión con MetaTrader 5 cerrada.
 2025-04-25 17:45:08,926 [INFO] smc_lit_bot: Resultado del ciclo #67: {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:45:08'}
 2025-04-25 17:45:08,926 [INFO] smc_lit_bot: Ciclo #67 completado correctamente.
+2025-05-15 21:34:40,961 [INFO] smc_lit_bot: Iniciando bot SMC + LIT en modo continuo...
+2025-05-15 21:34:40,984 [INFO] smc_lit_bot: Configuración cargada desde /home/pablo/Documentos/bot-smc-lit/config/config.yaml
+2025-05-15 21:34:40,986 [INFO] smc_lit_bot: Estado anterior cargado: {'last_cycle': 67, 'last_execution_time': '2025-04-25 17:45:08', 'last_results': {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:45:08'}}
+2025-05-15 21:34:40,988 [INFO] smc_lit_bot: Bot iniciado. Ejecutando ciclos cada 300 segundos. Presiona Ctrl+C para detener.
+2025-05-15 21:34:40,989 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #1 - 2025-05-15 21:34:40
+==================================================
+2025-05-15 21:34:40,990 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-05-15 21:34:40,992 [ERROR] smc_lit_bot: Error crítico en ciclo #1: initialize() got an unexpected keyword argument 'login'
+Traceback (most recent call last):
+  File "/home/pablo/Documentos/bot-smc-lit/src/main.py", line 101, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 63, in get_market_data
+    raw_data = self._fetch_raw_data()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 27, in _fetch_raw_data
+    if not self._connect_to_mt5():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 19, in _connect_to_mt5
+    if not mt5.initialize(login=self.config['mt5']['login'], password=self.config['mt5']['password'], server=self.config['mt5']['server']):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: initialize() got an unexpected keyword argument 'login'
+2025-05-15 21:39:41,830 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #2 - 2025-05-15 21:39:41
+==================================================
+2025-05-15 21:39:41,831 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-05-15 21:39:41,832 [ERROR] smc_lit_bot: Error crítico en ciclo #2: initialize() got an unexpected keyword argument 'login'
+Traceback (most recent call last):
+  File "/home/pablo/Documentos/bot-smc-lit/src/main.py", line 101, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 63, in get_market_data
+    """Detecta bloques de orden institucional usando velas de absorción"""
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 27, in _fetch_raw_data
+    self.logger.info("Conexión exitosa a MT5 (broker creado)")
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 19, in _connect_to_mt5
+    try:
+         
+TypeError: initialize() got an unexpected keyword argument 'login'
+2025-05-15 21:42:09,051 [INFO] smc_lit_bot: Iniciando bot SMC + LIT en modo continuo...
+2025-05-15 21:42:09,062 [INFO] smc_lit_bot: Configuración cargada desde /home/pablo/Documentos/bot-smc-lit/config/config.yaml
+2025-05-15 21:42:09,062 [INFO] smc_lit_bot: Estado anterior cargado: {'last_cycle': 67, 'last_execution_time': '2025-04-25 17:45:08', 'last_results': {'status': 'success', 'action': 'no_signals', 'timestamp': '2025-04-25 17:45:08'}}
+2025-05-15 21:42:09,062 [INFO] smc_lit_bot: Bot iniciado. Ejecutando ciclos cada 300 segundos. Presiona Ctrl+C para detener.
+2025-05-15 21:42:09,063 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #1 - 2025-05-15 21:42:09
+==================================================
+2025-05-15 21:42:09,063 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-05-15 21:42:09,063 [ERROR] smc_lit_bot.data: Fallo de conexión con MT5: No module named 'MetaTrader5'
+2025-05-15 21:42:09,072 [ERROR] smc_lit_bot: Error crítico en ciclo #1: 'real_volume'
+Traceback (most recent call last):
+  File "/home/pablo/Documentos/bot-smc-lit/src/main.py", line 101, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 73, in get_market_data
+    processed = self.calculate_volume_profile(raw_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 58, in calculate_volume_profile
+    ema = EMAIndicator(close=df['real_volume'], window=self.volume_lookback)
+                             ~~^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/venv/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'real_volume'
+2025-05-15 21:47:09,793 [INFO] smc_lit_bot: 
+==================================================
+Iniciando ciclo #2 - 2025-05-15 21:47:09
+==================================================
+2025-05-15 21:47:09,793 [INFO] smc_lit_bot: Descargando y preparando datos de mercado...
+2025-05-15 21:47:09,794 [ERROR] smc_lit_bot.data: Fallo de conexión con MT5: No module named 'MetaTrader5'
+2025-05-15 21:47:09,795 [ERROR] smc_lit_bot: Error crítico en ciclo #2: 'real_volume'
+Traceback (most recent call last):
+  File "/home/pablo/Documentos/bot-smc-lit/src/main.py", line 101, in main
+    market_data = data_manager.get_market_data()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 73, in get_market_data
+    processed = self.calculate_volume_profile(raw_data)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/src/modules/data_manager.py", line 58, in calculate_volume_profile
+    ema = EMAIndicator(close=df['real_volume'], window=self.volume_lookback)
+                             ~~^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pablo/Documentos/bot-smc-lit/venv/lib/python3.12/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'real_volume'

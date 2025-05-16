@@ -96,7 +96,7 @@ class TradeExecutor:
             return self.backtest(data)
             
         # Modo live trading
-        import MetaTrader5 as mt5  # Importamos aquí para evitar errores en modo backtest
+        import mt5  # Importamos aquí para evitar errores en modo backtest
         
         # Intentar conectar a MT5 con reintentos
         max_retries = 3

@@ -48,3 +48,12 @@
 2025-04-25 16:04:36,074 - bot_service - INFO -   - Tiempo de ejecuci�n: 3:52:46.156429
 2025-04-25 16:04:36,192 - bot_service - INFO -   - �ltimo ciclo: 46
 2025-04-25 16:04:36,192 - bot_service - INFO -   - �ltima ejecuci�n: 2025-04-25 15:59:56
+2025-05-15 21:42:02,751 - bot_service - INFO - Iniciando el bot SMC+LIT...
+2025-05-15 21:42:02,753 - bot_service - INFO - Bot iniciado con PID: 19213
+2025-05-15 21:42:02,754 - bot_service - INFO - El bot está ejecutándose en segundo plano. Usa 'python run_bot_service.py stop' para detenerlo.
+2025-05-15 21:42:24,297 - bot_service - INFO - El bot está en ejecución:
+2025-05-15 21:42:24,298 - bot_service - INFO -   - PID: 19213
+2025-05-15 21:42:24,298 - bot_service - INFO -   - Iniciado: 2025-05-15 21:42:01
+2025-05-15 21:42:24,299 - bot_service - INFO -   - Tiempo de ejecución: 0:00:22.349617
+2025-05-15 21:42:24,311 - bot_service - INFO -   - Último ciclo: 67
+2025-05-15 21:42:24,312 - bot_service - INFO -   - Última ejecución: 2025-04-25 17:45:08

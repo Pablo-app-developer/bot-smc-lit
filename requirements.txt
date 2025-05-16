@@ -3,12 +3,12 @@ pandas
 numpy>=1.20.0
 matplotlib>=3.4.0
 scikit-learn>=0.24.0
-MetaTrader5>=5.0.0
+Mt5
 pytz>=2021.1
 
 # Procesamiento de datos y análisis
-ta-lib>=0.4.0
-pandas-ta>=0.3.0
+ta
+pandas
 
 # Utilidades y sistema
 psutil>=5.8.0

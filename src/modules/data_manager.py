@@ -1,8 +1,9 @@
 # src/modules/data_manager.py
 
 import logging
-import MetaTrader5 as mt5
+import mt5
 import pandas as pd
+from ta.trend import EMAIndicator
 
 class DataManager:
     def __init__(self, config):
@@ -14,12 +15,20 @@ class DataManager:
         self.timeframe = config['mt5']['timeframe']
 
     def _connect_to_mt5(self):
-        """Conecta a MetaTrader 5 usando las credenciales del archivo de configuración"""
-        if not mt5.initialize(login=self.config['mt5']['login'], password=self.config['mt5']['password'], server=self.config['mt5']['server']):
-            self.logger.error("Fallo de conexión con MT5: %s", mt5.last_error())
+        """Conecta a MetaTrader 5 usando la nueva API mt5 (PythonMetaTrader5)."""
+        try:
+            mt5.initialize()
+            from MetaTrader5 import Broker
+            self.broker = Broker(
+                log=self.config['mt5']['login'],
+                password=self.config['mt5']['password'],
+                server=self.config['mt5']['server']
+            )
+            self.logger.info("Conexión exitosa a MT5 (broker creado)")
+            return True
+        except Exception as e:
+            self.logger.error(f"Fallo de conexión con MT5: {e}")
             return False
-        self.logger.info("Conexión exitosa a MT5")
-        return True
 
     def _fetch_raw_data(self):
         """Obtiene datos de mercado desde MT5"""
@@ -27,25 +36,27 @@ class DataManager:
             return pd.DataFrame()  # Devuelve un DataFrame vacío en caso de fallo
 
         self.logger.info(f"Obteniendo datos de mercado para {self.symbol} en {self.timeframe}")
-        rates = mt5.copy_rates_from_pos(self.symbol, mt5.TIMEFRAME_M15, 0, 1000)
-        mt5.shutdown()
-
-        if rates is None:
-            self.logger.error("No se pudieron obtener los datos de mercado")
+        try:
+            # Suponiendo que la API Broker tiene un método get_rates o similar
+            if hasattr(self.broker, 'get_rates'):
+                rates = self.broker.get_rates(self.symbol, self.timeframe, 1000)
+                df = pd.DataFrame(rates)
+                # Adaptar el procesamiento de columnas según la estructura recibida
+                if 'time' in df.columns:
+                    df['datetime'] = pd.to_datetime(df['time'], unit='s')
+                self.logger.info(f"Columnas disponibles en los datos: {df.columns}")
+                return df
+            else:
+                self.logger.error("La API Broker no tiene un método get_rates. Adapta este bloque según la documentación de la librería mt5/PythonMetaTrader5.")
+                return pd.DataFrame()
+        except Exception as e:
+            self.logger.error(f"Error al obtener datos de mercado: {e}")
             return pd.DataFrame()
 
-        df = pd.DataFrame(rates)
-        df['time'] = pd.to_datetime(df['time'], unit='s')
-        df.rename(columns={'time': 'datetime'}, inplace=True)
-
-        # Verifica las columnas disponibles
-        self.logger.info(f"Columnas disponibles en los datos: {df.columns}")
-
-        return df
-
     def calculate_volume_profile(self, df):
-        """Calcula perfiles de volumen usando media móvil ponderada"""
-        df['volume_profile'] = df['real_volume'].ewm(span=self.volume_lookback).mean()
+        """Calcula perfiles de volumen usando un indicador técnico de la librería ta (EMA)."""
+        ema = EMAIndicator(close=df['real_volume'], window=self.volume_lookback)
+        df['volume_profile'] = ema.ema_indicator()
         return df
 
     def detect_order_blocks(self, df):
